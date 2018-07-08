@@ -1,0 +1,35 @@
+{
+  "name": "cross-product",
+  "version": "1.0.0",
+  "description": "You can change and select horizontal and vertical goods together in a view.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --inline --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nasangw/cross-product.git"
+  },
+  "author": "nasangw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nasangw/cross-product/issues"
+  },
+  "homepage": "https://github.com/nasangw/cross-product#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.5",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "node-sass": "^4.9.2",
+    "normalize.css": "^8.0.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "swiper": "^4.3.3",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
