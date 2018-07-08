@@ -6,19 +6,28 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: [
+        index: [
             './src/js/app.js',
             './src/sass/app.scss',
         ]
         // js_lib: ["jquery", "bootstrap", "underscore"],
     },
+    devServer: {
+        historyApiFallback: true,
+        inline: true, 
+        hot: true,
+        contentBase: './public',
+    },
     output: {
-        filename: '[name].js',
-        path: path.join(__dirname, './dist/js')
+        // filename: '[name].js',
+        // path: path.join(__dirname, './dist/js')
+        filename: 'bundle.js', 
+        path: path.resolve(__dirname, 'public'),
     },
     mode: 'development',
     // devtool: '#inline-source-map',
-    devtool: "cheap-module-eval-source-map",
+    // devtool: "cheap-module-eval-source-map",
+    // devtool: 'source-map',
     resolve: {
         modules: ["./node_modules"]
     },
@@ -44,21 +53,9 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin('../css/[name].css'),
-        // new webpack.ProvidePlugin({
-        //     $: "jquery",
-        //     jQuery: "jquery"
-        // }),
-        // new ManifestPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+        // new ExtractTextPlugin('../css/[name].css'),
+        new ExtractTextPlugin( path.resolve(__dirname, 'public/[name].css') ),
         new UglifyJSPlugin(),
-        // new webpack.optimize.CommonsChunkPlugin({
-        //     name: 'js_lib',
-        //     minChunks: function (module) {
-        //         return module.context && module.context.indexOf('node_modules') !== -1;
-        //     }
-        // }),
-        // new webpack.optimize.CommonsChunkPlugin({
-        //     name: 'manifest'
-        // }),
     ]
 }
