@@ -84,7 +84,7 @@ ul, ol {
     height: 252px;
     background-image: url(../images/watch/bg_text_right.png);
 }
-.wrapper-cross .wrap-button .btn-add {
+.wrapper-cross .btn-add {
     position: absolute;
     z-index: 20;
     border: 0;
@@ -98,12 +98,12 @@ ul, ol {
     background: url(../images/watch/btn_add.svg) 0 0 no-repeat;
     outline: none;
 }
-.wrapper-cross .wrap-button .target-strap {
+.wrapper-cross .target-strap {
     top: 60px;
     left: 50%;
     margin-left: 20px;
 }
-.wrapper-cross .wrap-button .target-body {
+.wrapper-cross .target-body {
     top: 160px;
     left: 50%;
     margin-left: 40px;
@@ -346,12 +346,12 @@ ul, ol {
     height: 336px;
     background-size: 80% 80%;
 }
-.wrapper-cross .wrap-button .target-strap {
+.wrapper-cross .target-strap {
     top: 110px;
     left: 50%;
     margin-left: 25px;
 }
-.wrapper-cross .wrap-button .target-body {
+.wrapper-cross .target-body {
     top: 252px;
     left: 50%;
     margin-left: 50px;
